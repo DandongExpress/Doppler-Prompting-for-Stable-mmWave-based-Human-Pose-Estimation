@@ -1,6 +1,6 @@
 # PULSE: Doppler Prompting for Stable mmWave-based Human Pose Estimation
 
-**ICML 2026** | [Paper](https://arxiv.org/abs/XXXX.XXXXX) <!-- replace with actual arXiv link -->
+**ICML 2026** | [Paper](https://arxiv.org/abs/2605.13233) <!-- replace with actual arXiv link -->
 
 Shuntian Zheng, Jiaqi Li, Xiaoman Lu, Shuai He, Yu Guan
 
