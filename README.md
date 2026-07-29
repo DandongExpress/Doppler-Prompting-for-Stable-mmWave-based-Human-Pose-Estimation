@@ -1,6 +1,6 @@
 # PULSE: Doppler Prompting for Stable mmWave-based Human Pose Estimation
 
-**ICML 2026** | [Paper](https://arxiv.org/abs/2605.13233) <!-- replace with actual arXiv link -->
+**ICML 2026** | [Paper](https://arxiv.org/abs/2605.13233)
 
 Shuntian Zheng, Jiaqi Li, Xiaoman Lu, Shuai He, Yu Guan
 
@@ -119,6 +119,21 @@ python tools/preprocess_mmradpose.py  --root data/mmRadPose
 
 XRF55 provides RA and RD maps; `preprocess_xrf55.py` reconstructs the unified RAD tensor following the weighted-distribution procedure described in the paper (Appendix C).
 
+**Generic paired layout** (also works with `--data_root input_data/`):
+
+```
+<input_root>/<split>/
+  seq_0000/rad.npy   # [T, R, A, D]
+  seq_0000/pose.npy  # [T, J, 3]  (mm, pelvis-centred preferred)
+```
+
+or per-frame files:
+
+```
+<input_root>/<split>/rad/*.npy   # [R, A, D]
+<input_root>/<split>/pose/*.npy  # [J, 3]  (matching filenames)
+```
+
 ### Training
 
 Single-frame mode on HuPR:
@@ -138,7 +153,7 @@ Configuration files for all three datasets are provided under `configs/`.
 ### Evaluation
 
 ```bash
-python eval.py --config configs/pulse_1f_hupr.yaml --ckpt checkpoints/pulse_1f_hupr.pth
+python eval.py --config configs/pulse_1f_hupr.yaml --ckpt checkpoints/pulse_1f_hupr_best.pth
 ```
 
 This reports MPJPE, PA-MPJPE, MPJVE, and AKV without any post-hoc smoothing.
@@ -147,7 +162,7 @@ Cross-dataset generalisation (train on HuPR, test on mmRadPose):
 
 ```bash
 python eval.py --config configs/pulse_1f_mmradpose.yaml \
-               --ckpt  checkpoints/pulse_1f_hupr.pth \
+               --ckpt  checkpoints/pulse_1f_hupr_best.pth \
                --cross_dataset
 ```
 
