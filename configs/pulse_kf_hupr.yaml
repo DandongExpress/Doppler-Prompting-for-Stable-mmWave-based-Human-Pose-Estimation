@@ -1,0 +1,32 @@
+# PULSE multi-frame (K=9) on HuPR
+model:
+  k_frames: 9
+  doppler_bins: 16
+  work_range: 64
+  work_angle: 64
+  patch_size: 4
+  embed_dim: 32
+  num_heads: 4
+  neighbor_patches: 3
+  beta: 1.0
+  depth: 4
+  dropout: 0.1
+  num_joints: 17
+  reg_hidden: 512
+
+data:
+  root: data/HuPR
+  train_split: train
+  val_split: val
+  test_split: test
+  pose_scale: 1.0
+
+train:
+  batch_size: 8
+  lr: 1.0e-4
+  weight_decay: 0.01
+  epochs: 100
+  grad_clip: 1.0
+  num_workers: 0
+  save_dir: checkpoints
+  tag: pulse_kf_hupr
