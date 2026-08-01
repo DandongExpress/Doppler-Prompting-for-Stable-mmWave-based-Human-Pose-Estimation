@@ -255,11 +255,11 @@ PULSE/
 If you find this work useful, please cite:
 
 ```bibtex
-@inproceedings{zheng2026pulse,
-  title     = {Doppler Prompting for Stable mmWave-based Human Pose Estimation},
-  author    = {Zheng, Shuntian and Li, Jiaqi and Lu, Xiaoman and He, Shuai and Guan, Yu},
-  booktitle = {Proceedings of the 43rd International Conference on Machine Learning (ICML)},
-  year      = {2026}
+@article{zheng2026doppler,
+  title={Doppler Prompting for Stable mmWave-based Human Pose Estimation},
+  author={Zheng, Shuntian and Li, Jiaqi and Lu, Xiaoman and He, Shuai and Guan, Yu},
+  journal={arXiv preprint arXiv:2605.13233},
+  year={2026}
 }
 ```
 
