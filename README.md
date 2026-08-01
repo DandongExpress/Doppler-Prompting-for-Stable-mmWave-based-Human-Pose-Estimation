@@ -265,10 +265,6 @@ If you find this work useful, please cite:
 
 ---
 
-## Acknowledgements
-
-This research is funded by the Department of Computer Science, University of Warwick.
-
 ---
 
 ## Licence
