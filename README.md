@@ -6,7 +6,6 @@ Shuntian Zheng, Jiaqi Li, Xiaoman Lu, Shuai He, Yu Guan
 
 *Department of Computer Science, University of Warwick* &nbsp;·&nbsp; *Beijing University of Posts and Telecommunications*
 
-Correspondence: Yu.Guan@warwick.ac.uk
 
 ---
 
